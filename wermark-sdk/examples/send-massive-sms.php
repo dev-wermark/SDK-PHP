@@ -4,6 +4,7 @@ $load = new Load;
 $load->autoLoad();
 
 $wermark = new WerMark;
+$wermark->setPublicKey('...');
 
 //Set the message to send
 $wermark->setMessage('Test Message!');

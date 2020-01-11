@@ -113,5 +113,15 @@ final class WerMark {
 
     }
 
+    public function setPublicKey($public_key) {
+
+        if (!empty($public_key)) {
+            $this->public_key = $public_key;
+        }
+
+        return;
+
+    }
+
 }
 ?>

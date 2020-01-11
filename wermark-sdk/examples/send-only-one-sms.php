@@ -4,6 +4,8 @@ $load = new Load;
 $load->autoLoad();
 
 $wermark = new WerMark;
+$wermark->setPublicKey('...');
+
 $response = $wermark->sendOneByOne('Test Message!', '317...');
 
 if ($response->status) {
