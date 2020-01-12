@@ -10,7 +10,7 @@ trait HTTP {
 
         $tam_data = count($data);
 
-        if ($tam_data <= 3) {
+        if ($tam_data <= 4) {
 
             $post = http_build_query($data);
 
@@ -130,6 +130,7 @@ trait HTTP {
 
         $data_send = array(
             'phones' => $phones,
+            'scheduled_date' => $this->scheduled_date,
             'public_key' => $this->public_key,
             'message' => $this->message
         );

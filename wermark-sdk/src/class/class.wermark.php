@@ -17,6 +17,7 @@ final class WerMark {
      */
     protected $message = '';
     protected $phones = array();
+    protected $scheduled_date = '';
 
     /**
      * For multiple send. Up to 2000 numbers.
@@ -121,6 +122,13 @@ final class WerMark {
 
         return;
 
+    }
+
+    /**
+     * @param string $date Format: Y/m/d H:i:s or Y-m-d H:i:s
+     */
+    public function setScheduledDate($date = '') {
+        $this->scheduled_date = $date;
     }
 
 }
