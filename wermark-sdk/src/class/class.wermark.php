@@ -125,7 +125,7 @@ final class WerMark {
     }
 
     /**
-     * @param string $date Format: Y/m/d H:i:s or Y-m-d H:i:s
+     * @param string $date Format: Y/m/d H:i:s exactly
      */
     public function setScheduledDate($date = '') {
         $this->scheduled_date = $date;

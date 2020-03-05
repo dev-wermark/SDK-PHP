@@ -2,8 +2,8 @@
 trait HTTP {
 
     protected $available_endpoints = array(
-        'send-sms' => 'https://api.wermark.com/sms/send/',
-        'get-balance' => 'https://api.wermark.com/user/get-balance/'
+        'send-sms' => 'https://api.wermark.com/v1/sms/send/',
+        'get-balance' => 'https://api.wermark.com/v1/user/get-balance/'
     );
 
     protected function post($data, $url, $array = false) {
@@ -27,8 +27,6 @@ trait HTTP {
             curl_setopt($ch, CURLOPT_IPRESOLVE, CURL_IPRESOLVE_V4 );
             $result = curl_exec($ch);
             curl_close($ch);
-
-            var_dump($result);
 
             if ($this->validateJSON($result)) {
 
