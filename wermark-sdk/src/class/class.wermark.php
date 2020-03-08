@@ -82,8 +82,8 @@ final class WerMark {
 
                 $this->message = $message;
 
-                $this->phones[] = array();
-                $this->phones[] = $phone;
+                $this->phones = array();
+                $this->phones[0] = $phone;
 
                 return $this->request('send-sms');
 
